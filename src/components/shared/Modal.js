@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 
 const Modal = ({ data, hideModal }) => {
   return (
@@ -30,7 +30,7 @@ const Modal = ({ data, hideModal }) => {
           <h1 className="text-[3rem]  font-bold">{data.name}</h1>
           <div className="text-ctrgreen text-lg flex-wrap flex gap-2 my-1">
             {data.toolsUsed.map((item) => {
-              return <span cla>{item}</span>;
+              return <span key={item}>{item}</span>;
             })}
           </div>
           <p className="text-lg my-5">{data.projectDesc}</p>
@@ -39,8 +39,8 @@ const Modal = ({ data, hideModal }) => {
           </span>
           <div className="flex gap-4 my-3">
             <a
-              href="#"
-              className="flex gap-2 items-center text-ctrgreen text-lg"
+              href="liveproject"
+              className="flex gap-2 items-center hover:underline text-ctrgreen text-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +57,8 @@ const Modal = ({ data, hideModal }) => {
               Source Code
             </a>
             <a
-              href="#"
-              className="flex gap-2 items-center text-ctrgreen text-lg"
+              href="liveproject"
+              className="flex gap-2 items-center hover:underline text-ctrgreen text-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

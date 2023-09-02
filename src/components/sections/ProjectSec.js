@@ -13,11 +13,13 @@ const ProjectSec = () => {
   const hideModal = () => {
     setmodalHandel({ modalStatus: !modalHandel.modalStatus });
   };
-  {
-    modalHandel.modalStatus
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
+
+  if (modalHandel.modalStatus) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
   }
+
   return (
     <section id="projects" className="w-full min-h-screen custom-container">
       {modalHandel.modalStatus && (
