@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const ExperienceSec = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <section></section>;
 };
 
 export default ExperienceSec;

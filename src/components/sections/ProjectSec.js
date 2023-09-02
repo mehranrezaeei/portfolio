@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const ProjectSec = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <section></section>;
 };
 
 export default ProjectSec;
