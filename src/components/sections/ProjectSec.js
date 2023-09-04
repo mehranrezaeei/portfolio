@@ -21,7 +21,10 @@ const ProjectSec = () => {
   }
 
   return (
-    <section id="projects" className="w-full min-h-screen custom-container">
+    <section
+      id="projects"
+      className="w-full min-h-screen custom-container scrollSections"
+    >
       {modalHandel.modalStatus && (
         <Modal data={modalHandel.data} hideModal={hideModal} />
       )}
@@ -44,7 +47,7 @@ const ProjectSec = () => {
                   key={uuidv4()}
                 >
                   {/* View Modal */}
-                  <div className="bg-ClBlack-800 rounded-lg flex justify-center relative h-[300px] overflow-hidden">
+                  <div className="bg-ClBlack-800 rounded-lg flex justify-center relative h-[300px] overflow-hidden secFader">
                     <div
                       className="absolute w-5/6 bottom-[-7%] h-[90%] cursor-pointer rounded-md transition-all overflow-hidden hover:rotate-3 hover:scale-[1.07]"
                       onClick={() => {
@@ -59,7 +62,7 @@ const ProjectSec = () => {
                     </div>
                   </div>
                   {/*  Project Name and Links */}
-                  <div className="flex items-center text-white gap-3 py-2">
+                  <div className="flex items-center text-white gap-3 my-2 secFader">
                     <h3 className="text-[1.5rem] font-bold">{item.name}</h3>
                     <div className="h-[1px] bg-ClBlack-700 flex-auto"></div>
                     <a href="fr">
@@ -78,13 +81,13 @@ const ProjectSec = () => {
                     </a>
                   </div>
                   {/* Tools That Used In Project */}
-                  <div className="flex text-lg items-center  text-ctrgreen gap-3 text-ellipsis overflow-hidden">
+                  <div className="flex text-lg items-center  text-ctrgreen gap-3 text-ellipsis overflow-hidden secFader">
                     {item.toolsUsed.map((item) => {
                       return <span key={uuidv4()}>{item}</span>;
                     })}
                   </div>
                   {/* About Project */}
-                  <div className="py-2 w-full">
+                  <div className="py-2 w-full secFader">
                     <p className="text-ClBlack-700 max-w-full text-[1.25rem] line-clamp-3">
                       {item.projectDesc}
                     </p>

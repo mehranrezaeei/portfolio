@@ -4,19 +4,19 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="h-screen w-full flex justify-center custom-container  bg-ClBlack-900"
+      className="h-screen w-full flex justify-center custom-container  bg-ClBlack-900 scrollSections"
     >
       <div className="flex flex-col items-center">
-        <h1 className="md:text-[7rem] sm:text-[5rem] text-[3.5rem]  text-white font-bold">
+        <h1 className="md:text-[7rem] sm:text-[5rem] text-[3.5rem] text-white font-bold secFader">
           Contact<span className="text-ctrgreen">.</span>
         </h1>
-        <p className="text-ClBlack-700 my-6">
+        <p className="text-ClBlack-700 my-6 secFader">
           Shoot me an email if you want to connect! You can also find me on
           Linkedin or Twitter if that's more your speed.
         </p>
         <a
           href="mailto:mhrnrezaeei@gmail.com"
-          className="sm:text-[1.5rem] text-lg text-white font-bold hover:text-ctrgreen flex items-center gap-1"
+          className="sm:text-[1.5rem] text-lg text-white font-bold hover:text-ctrgreen flex items-center gap-1 secFader"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

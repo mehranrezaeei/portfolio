@@ -14,7 +14,7 @@ const AboutSec = () => {
   return (
     <section
       id="about"
-      className="custom-container  min-h-screen w-full text-white"
+      className="custom-container  min-h-screen w-full text-white scrollSections"
     >
       <div className="w-full h-full ">
         {/* Header Of Section */}
@@ -30,17 +30,17 @@ const AboutSec = () => {
 
         <div className="flex md:flex-row flex-col gap-5 my-3">
           {/* About Side */}
-          <div className="sm:text-[1.25rem] font-mono flex-auto text-ClBlack-700">
+          <div className="sm:text-[1.25rem] font-mono flex flex-col flex-auto text-ClBlack-700">
             {/* Import About Data From Data File */}
             {aboutInfo.map((value) => {
               return (
-                <p className="pb-3" key={uuidv4()}>
+                <p className="mb-3 secFader " key={uuidv4()}>
                   {value}
                 </p>
               );
             })}
             {/* Links Side */}
-            <div className="flex items-center">
+            <div className="flex items-center secFader">
               <h1 className="text-lg text-ctrgreen">My Links &gt;</h1>
               <div className="flex items-center pl-4 gap-4">
                 <a href="github.com">
@@ -90,8 +90,8 @@ const AboutSec = () => {
           </div>
 
           {/* Skill Side */}
-          <div className="min-w-[30%] flex flex-col text-white">
-            <div>
+          <div className="min-w-[30%] flex flex-col text-white ">
+            <div className="secFader">
               <div className="flex items-center">
                 <img src={skillIcon} className="w-7 h-7" alt="" />
                 <span className="text-[1.4rem] font-bold mx-2">Skills</span>
@@ -109,7 +109,7 @@ const AboutSec = () => {
                 })}
               </div>
             </div>
-            <div className="mt-10">
+            <div className="mt-10 secFader">
               <div className="flex items-center">
                 <img src={sideSkillIcon} className="w-7 h-7" alt="" />
                 <span className="text-[1.4rem] font-bold mx-2">

@@ -5,7 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 
 const ExperienceSec = () => {
   return (
-    <section id="experience" className="w-full min-h-screen custom-container">
+    <section
+      id="experience"
+      className="w-full min-h-screen custom-container scrollSections"
+    >
       {/* Header Of Section */}
       <div className="w-full flex items-center text-white">
         <h1 className="sm:text-[4rem] text-[3rem] font-bold sm:mr-4">
@@ -21,7 +24,7 @@ const ExperienceSec = () => {
             <>
               <div className="flex flex-col border-b py-5" key={uuidv4()}>
                 {/* Name Of Company And Time */}
-                <div className="flex justify-between mb-3 sm:flex-row flex-col">
+                <div className="flex justify-between mb-3 sm:flex-row flex-col secFader">
                   <h4 className="text-white text-[1.5rem] font-bold">
                     {item.companyName}
                   </h4>
@@ -31,7 +34,7 @@ const ExperienceSec = () => {
                 </div>
 
                 {/* Major And City Info */}
-                <div className="flex justify-between mb-3 sm:flex-row flex-col">
+                <div className="flex justify-between mb-3 sm:flex-row flex-col secFader">
                   <h4 className="text-ctrgreen text-[1.2rem] font-bold">
                     {item.jobTitle}
                   </h4>
@@ -39,13 +42,13 @@ const ExperienceSec = () => {
                 </div>
 
                 {/* Job Description  */}
-                <div className="mb-3">
+                <div className="mb-3 secFader">
                   <p className="line-clamp-2 text-ClBlack-700 text-lg">
                     {item.jobDesc}
                   </p>
                 </div>
                 {/* Tools And Tech That Used In That Company */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 secFader">
                   {item.jobSkills.map((skill) => {
                     return (
                       <span

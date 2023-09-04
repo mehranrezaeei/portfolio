@@ -6,7 +6,7 @@ import Experience from "./sections/ExperienceSec";
 
 const Main = () => {
   return (
-    <main className="bg-ClBlack-900 flex flex-col gap-14  w-full">
+    <main className="bg-ClBlack-900 flex flex-col gap-14 overflow-x-hidden  w-full">
       <About />
       <Projects />
       <Experience />

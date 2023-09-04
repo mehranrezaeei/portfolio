@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // Images
 import myLogo from "../assets/icons/My Merhan Rezaei Logo.svg";
-// custom Hooks
-import ScrollSpy from "../hooks/useScrollSpy";
 
 const Sidebar = () => {
-  const [activeSideBtn, setactiveSideBtn] = useState({
-    abActive: false,
-    prActive: false,
-    exActive: false,
-    coActive: false,
-  });
-  useEffect(() => {
-    ScrollSpy(setactiveSideBtn);
-  }, []);
-
   return (
-    <div className="fixed z-50 top-0 left-0 w-auto bg-black h-screen">
+    <div className="fixed z-50 top-0 left-0 w-auto bg-black h-screen sideFader">
       <a href="/" className="w-full  flex justify-center overflow-hidden">
         <img
           src={myLogo}
@@ -25,48 +13,32 @@ const Sidebar = () => {
         />
       </a>
 
-      <div className="list-none w-full overflow-hidden items-center text-white flex writingMode">
+      <div className="list-none w-full  items-center text-white flex writingMode overflow-hidden">
         {/* About */}
         <a
           href="#about"
-          className={` sm:hover:text-gray-300 border-r sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r ${
-            activeSideBtn.abActive
-              ? "border-ctrgreen text-gray-300 bg-ClBlack-900"
-              : "bg-transparent text-ClBlack-700 border-black"
-          }`}
+          className="sm:hover:text-gray-300 border-r bg-transparent text-ClBlack-700 border-black delay-[50ms] sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r sideFader sideScroll"
         >
           About
         </a>
         {/* Projects */}
         <a
           href="#projects"
-          className={` sm:hover:text-gray-300 border-r sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r ${
-            activeSideBtn.prActive
-              ? "border-ctrgreen text-gray-300 bg-ClBlack-900"
-              : "bg-transparent text-ClBlack-700 border-black"
-          }`}
+          className="sm:hover:text-gray-300 border-r bg-transparent text-ClBlack-700 border-black delay-[50ms] sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r sideFader sideScroll"
         >
           Projects
         </a>
         {/* Experience */}
         <a
           href="#experience"
-          className={` sm:hover:text-gray-300 border-r sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r ${
-            activeSideBtn.exActive
-              ? "border-ctrgreen text-gray-300 bg-ClBlack-900"
-              : "bg-transparent text-ClBlack-700 border-black"
-          }`}
+          className="sm:hover:text-gray-300 border-r bg-transparent text-ClBlack-700 border-black delay-[50ms] sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r sideFader sideScroll"
         >
           Exp
         </a>
         {/* Contact */}
         <a
           href="#contact"
-          className={` sm:hover:text-gray-300 border-r sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r ${
-            activeSideBtn.coActive
-              ? "border-ctrgreen text-gray-300 bg-ClBlack-900"
-              : "bg-transparent text-ClBlack-700 border-black"
-          }`}
+          className="sm:hover:text-gray-300 border-r bg-transparent text-ClBlack-700 border-black delay-[50ms] sm:hover:border-ctrgreen py-6 sm:text-lg px-5 sm:hover:bg-ClBlack-900 hover:border-r sideFader sideScroll"
         >
           Contact
         </a>
