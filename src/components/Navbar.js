@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="fixed w-full h-20 flex items-center bg-[#222223]/5  backdrop-blur-[12px] pl-24 sm:pl-28  px-5 sm:px-14 justify-between z-40">
       <ul className="flex items-center text-lg sm:space-x-3 space-x-1">
         <li className="w-8 text-white uppercase navFader delay-[50ms]">
-          <a href="f">
+          <a href="https://github.com/mehranrezaeei">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               stroke="currentColor"
@@ -22,7 +22,7 @@ const Navbar = () => {
         </li>
 
         <li className="w-8 text-white uppercase navFader delay-[100ms]">
-          <a href="f">
+          <a href="https://www.linkedin.com/in/mehranrezaei">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               stroke="currentColor"
@@ -39,7 +39,7 @@ const Navbar = () => {
         </li>
 
         <li className="w-8 text-white uppercase navFader delay-[150ms]">
-          <a href="f">
+          <a href="twitter">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               stroke="currentColor"

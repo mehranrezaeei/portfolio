@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
@@ -8,11 +8,7 @@ import headerImgMoon from "../assets/images/bg-pic-moon.png";
 // custom Hooks
 import useMouseFollower from "../hooks/useMouseFollower";
 
-import { scrollIntersectionObserver } from "./shared/helper";
 const Header = () => {
-  useEffect(() => {
-    scrollIntersectionObserver();
-  }, []);
   const cursorDot = useRef();
   const cursorOutline = useRef();
   useMouseFollower({ cursorDot, cursorOutline });
